@@ -5,9 +5,16 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1>Servlet and JSP Examples
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+
+<ul>
+    <li><a href="hello-servlet">Hello Servlet</a></li>
+    <li><a href="HelloFormGetExample.jsp">Hello Form Get Example</a></li>
+    <li><a href="HelloFormPutExample.jsp">Hello Form PUT Example</a></li>
+</ul>
+
+
 </body>
 </html>
