@@ -1,5 +1,6 @@
-package com.example.Java_3_Servlets_JSP_Examples;
+package ca.nl.cna.java3.a2;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -8,24 +9,30 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet(name = "libraryData", value = "/library-data")
 public class LibraryData extends HttpServlet {
 
     private String message;
     public void init() {
-        message = "lIBRARY!";
+        message = "Library Servlet!";
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
 
-        // Hello
-        PrintWriter out = resp.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        //TODO Use a variable "view" to determine book or author query
+
+        List<Book> bookList = DBConnection.getAllBooks();
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("a2/viewallbooks.jsp");
+
+        request.setAttribute("booklist", bookList);
+
+        //TODO add the list to the request
+        requestDispatcher.forward(request, response);
+
 
     }
 
