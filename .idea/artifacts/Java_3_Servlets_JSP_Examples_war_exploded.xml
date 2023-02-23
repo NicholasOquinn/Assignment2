@@ -13,6 +13,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Java-3-Servlets-JSP-Examples" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../JavaLib/mariadb-java-client-2.7.4.jar" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Java-3-Servlets-JSP-Examples-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

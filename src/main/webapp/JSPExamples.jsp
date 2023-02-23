@@ -18,14 +18,19 @@
 
 <p>
     <%-- Expression --%>
-    <b>Example of an Expression </b>
+    <b>1) Example of an Expression: </b>
+        </br>
     Current time is: <%= new java.util.Date() %>
+</p>
+</br>
+<p>
+    <%-- Scriplet with reference to a variable --%>
+    2) An Example of a Scriplet:
+    <% out.print(string + "... Sample JSP code"); %>
 </p>
 
 <p>
-    <%-- Scriplet with reference to a variable --%>
-    An Example of a Scriplet:
-    <% out.print(string + "... Sample JSP code"); %>
+    3) Example of an If/Else inline: </br>
 </p>
 
 <%
@@ -37,10 +42,13 @@
     }
 %>
 
+</br>
+
 <%-- JSP Implicit Objects --%>
 
 <%
-    out.println("out is an implicit Object <br>");
+    out.println("4) This out is an implicit Object <br>");
+    //TODO Test other Implicit Objects
 %>
 
 
