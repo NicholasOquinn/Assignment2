@@ -80,7 +80,7 @@ public class DBConnection {
     private class BooksDatabaseSQL{
 
         //Login information
-        public static final String DB_URL = "jdbc:mariadb://localhost:3307/books";
+        public static final String DB_URL = "jdbc:mariadb://localhost:3306/books";
         public static final String USER = "root";
         public static final String PASS = "DXmE4JsCpvmZTQ";
 

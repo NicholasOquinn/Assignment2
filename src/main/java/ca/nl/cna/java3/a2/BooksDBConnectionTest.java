@@ -10,7 +10,7 @@ import java.sql.*;
 public class BooksDBConnectionTest {
 
     //Set up the Database Parameters
-    static final String DB_URL = "jdbc:mariadb://localhost:3307/books";
+    static final String DB_URL = "jdbc:mariadb://localhost:3306";
     //TODO Customize to your setup
     static final String USER = "root";
     static final String PASS = "DXmE4JsCpvmZTQ";
